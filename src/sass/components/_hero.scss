@@ -1,0 +1,109 @@
+@use "../utils/index.scss" as *;
+#hero {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--default);
+  @include breakpoint-down(medium){
+    height: 60vh;
+  }
+  @include breakpoint-down(small){
+    height: 100vh;
+  }
+  .hero-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 rem(30);
+    @include breakpoint-down(small) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-left {
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      @include breakpoint-down(small) {
+        width: 100%;
+      }
+  
+      .left-intro {
+        width: 100%;
+        text-align: left;
+        margin: rem(50) 0;
+
+        h1 {
+          color: var(--color-900);
+          margin-bottom: rem(5);
+          font-weight: 900;
+        }
+
+        p {
+          color: var(--color-600);
+        }
+      }
+
+      .left-location,
+      .left-active,
+      .left-icons {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: rem(10);
+        margin-bottom: rem(10);
+
+        p {
+          color: var(--color-600);
+        }
+
+        i {
+          color: var(--color-600);
+        }
+      }
+      .left-icons {
+        gap: rem(20);
+      }
+      .left-active {
+        .circle {
+          width: rem(10);
+          height: rem(10);
+          border-radius: 50%;
+          background-color: var(--color-green);
+        }
+      }
+    }
+    .hero-right {
+      width: 35%;
+      padding-left: rem(50);
+      margin: rem(50) 0;
+      @include breakpoint-down(small) {
+        width: 100%;
+      }
+      @include breakpoint-down(medium) {
+        width: 50%;
+        
+      }
+
+      .right-image {
+        width: rem(300);
+        height: rem(345);
+        background-image: url("/src/assets/rahim.jpg");
+        background-position: top;
+        background-size: cover;
+        box-shadow: 20px 6px 0px var(--color-200),
+          20px 17px 0px var(--color-200);
+          @include breakpoint-down(small){
+            width: rem(200);
+            height: rem(200);
+            padding-left: 0;
+            box-shadow: 20px 6px 0px var(--color-200),
+            20px 17px 0px var(--color-200);
+          }
+      }
+    }
+  }
+}

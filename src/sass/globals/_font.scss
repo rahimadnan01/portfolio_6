@@ -1,0 +1,91 @@
+@use '../utils/index.scss' as *;
+
+:root{
+    --font-inter:"Inter", sans-serif;
+}
+
+@include breakpoint(large){
+    h1{
+font-size: rem(60);
+line-height: rem(72);
+letter-spacing: -2%;
+font-weight: 700;
+    }
+
+    h2{
+        font-size: rem(36);
+        line-height: rem(40);
+        letter-spacing: -2%;
+        font-weight: 600;
+    }
+
+    h3{
+        font-size: rem(30);
+        line-height: rem(36);
+        letter-spacing: -2%;
+        font-weight: 600;
+    }
+
+    p{
+        font-size: rem(20);
+        line-height: rem(28);
+        font-weight: 400;
+    }
+}
+
+@include breakpoint(medium){
+    h1{
+        font-size: rem(40);
+        line-height: rem(48);
+        letter-spacing: -2%;
+        font-weight: 700;
+            }
+        
+            h2{
+                font-size: rem(18);
+                line-height: rem(28);
+                letter-spacing: -2%;
+                font-weight: 600;
+            }
+        
+            h3{
+                font-size: rem(24);
+                line-height: rem(32);
+                letter-spacing: -2%;
+                font-weight: 600;
+            }
+        
+            p{
+                font-size: rem(18);
+                line-height: rem(28);
+                font-weight: 400;
+            }
+}
+
+@include breakpoint(small){
+    h1{
+        font-size: rem(36);
+        line-height: rem(40);
+        font-weight: 600;
+            }
+        
+            h2{
+                font-size: rem(18);
+                line-height: rem(28);
+                letter-spacing: -2%;
+                font-weight: 600;
+            }
+        
+            h3{
+                font-size: rem(24);
+                line-height: rem(32);
+                letter-spacing: -2%;
+                font-weight: 600;
+            }
+        
+            p{
+                font-size: rem(18);
+                line-height: rem(28);
+                font-weight: 400;
+            }
+}
